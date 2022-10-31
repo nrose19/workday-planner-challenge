@@ -9,19 +9,25 @@ $(document).ready(function(){
     // Time of the Day - Highlighted
     var todayHour = moment().format('HH');
 
-//////////////////////// ASK BCS about this!!!!!!!!!!/////////////////////
-    // if(todayHour === ) {
-    //     addClass('present');
-    // } else if (todayHour > ){
-    //     removeClass('present');
-    //     addClass('future');
-    // } else if (todayHour < ){
-    //     removeClass('future');
-    //     addClass('past')
-    // }
+// compares current time of day - highlights past, present, and future events
+// $(this) function holds the value originally requested without running through the DOM again
+   $('.row').each(function(){
+       var timeComparison = $(this).attr('id');
 
+    if(todayHour === timeComparison) {
+        $(this).addClass('present');
+    } else if (todayHour < timeComparison){
+        $(this).removeClass('present');
+        $(this).addClass('future');
+    } else if (todayHour > timeComparison){
+        $(this).removeClass('future');
+        $(this).addClass('past');
+    }
+   }) 
+
+    
     // Time of Day - saved within local storage
-//////////////////////////// ASK BCS ABOUT THIS!!/////////////////////////
+
     // $('.saveBtn').click(function(event){
     //     event.preventDefault();
     //     // variables for the values
@@ -32,3 +38,4 @@ $(document).ready(function(){
     
 
 })
+
