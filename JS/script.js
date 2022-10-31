@@ -25,17 +25,20 @@ $(document).ready(function(){
     }
    }) 
 
-    
-    // Time of Day - saved within local storage
+    // content to be listed - set within local storage
+    $('.saveBtn').click(function(event){
+        event.preventDefault();
+        var todos = $(this).siblings('.hourTextArea').text();
+        // this is needed because it is the parent function of class=saveBtn
+        // but is there anyway to reuse timeComparison and add parent() to it?
+        var todoTimeBlock = $(this).parent().attr('id');
+        localStorage.setItem(todos, todoTimeBlock);
+    })
+    // taken out of local storage and stored within application
+   
+    // $('#09 .row').text(localStorage.getItem('.hourTextArea'));
 
-    // $('.saveBtn').click(function(event){
-    //     event.preventDefault();
-    //     // variables for the values
-    //     localStorage.setItem(//variables)
-    // })
-
-    // content to be listed - saved within local storage
-    
 
 })
+
 
