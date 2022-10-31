@@ -21,13 +21,26 @@ textarea {
   border-bottom: 10px solid black;
 }
 
+#currentDay {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 2.2rem;
+  text-decoration: solid;
+}
+
+img {
+  height: 20px;
+  width: 20px;
+}
+
 .container {
   width: 1024px;
 }
 
 .hourTextArea {
   white-space: pre-wrap;
-  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.75rem;
 }
 
 .row {
@@ -66,9 +79,10 @@ textarea {
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
   color: white;
+  font-size: 1.1rem;
 }
 
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 23px;
   transition: all 0.3s ease-in-out;
 }
