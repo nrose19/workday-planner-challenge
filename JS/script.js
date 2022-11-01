@@ -35,9 +35,9 @@ $(document).ready(function(){
         localStorage.setItem(todos, todoTimeBlock);
     })
     // taken out of local storage and stored within application
-   
-    // $('#09 .row').text(localStorage.getItem('.hourTextArea'));
-
+    // could not figure out how to get local storage to stay within the application itself  
+    // $('#09 .row').text(localStorage.getItem('09'));
+    // $('#09 .row').text(localStorage.getItem(todos));
 
 })
 
