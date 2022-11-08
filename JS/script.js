@@ -28,17 +28,34 @@ $(document).ready(function(){
     // content to be listed - set within local storage
     $('.saveBtn').click(function(event){
         event.preventDefault();
-        var todos = $(this).siblings('.hourTextArea').text();
+        var todos = $(this).siblings('.hourTextArea').val();
+
+        // console.log($(this).siblings('.hourTextArea').val());
+
         // this is needed because it is the parent function of class=saveBtn
         // but is there anyway to reuse timeComparison and add parent() to it?
+        
         var todoTimeBlock = $(this).parent().attr('id');
-        localStorage.setItem(todos, todoTimeBlock);
+        // console.log($(this).parent().attr('id'))
+        
+        // needed key to be the timeblock id and the value to be the text area!
+        localStorage.setItem(todoTimeBlock, todos);
     })
+
     // taken out of local storage and stored within application
     // could not figure out how to get local storage to stay within the application itself  
-    // $('#09 .row').text(localStorage.getItem('09'));
+    // $('#09').text(localStorage.getItem('09'));
+    $('#09').children('textarea').val(localStorage.getItem('09'));
+    $('#10').children('textarea').val(localStorage.getItem('10'));
+    $('#11').children('textarea').val(localStorage.getItem('11'));
+    $('#12').children('textarea').val(localStorage.getItem('12'));
+    $('#13').children('textarea').val(localStorage.getItem('13'));
+    $('#14').children('textarea').val(localStorage.getItem('14'));
+    $('#15').children('textarea').val(localStorage.getItem('15'));
+    $('#16').children('textarea').val(localStorage.getItem('16'));
+    $('#17').children('textarea').val(localStorage.getItem('17'));
+    
+    // console.log($('#09').children('textarea'))
     // $('#09 .row').text(localStorage.getItem(todos));
 
 })
-
-
