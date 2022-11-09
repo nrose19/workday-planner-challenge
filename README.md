@@ -18,4 +18,4 @@ THEN the saved events persist
 ```
 
 ## Link
-Link to the deployed <a href="https://nrose19.github.io/workday-planner-challenge/">Work Day Planner</a>
+Link to the deployed <a href="https://nrose19.github.io/workday-planner-challenge/">Work Day Planner!</a>
